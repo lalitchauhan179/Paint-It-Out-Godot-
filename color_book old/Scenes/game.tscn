@@ -1,0 +1,652 @@
+[gd_scene load_steps=29 format=3 uid="uid://cxdx22k03vlbl"]
+
+[ext_resource type="Script" path="res://Games/color_book/Scripts/game.gd" id="1_ewcqq"]
+[ext_resource type="Texture2D" uid="uid://c08axxgawvd4x" path="res://Games/color_book/Assets/New folder/Panel.jpg" id="2_yfwjn"]
+[ext_resource type="AudioStream" uid="uid://cgx8r0f6bxob6" path="res://Games/color_book/Assets/Sketching Game/Marker 1.mp3" id="5_3ntvq"]
+[ext_resource type="Texture2D" uid="uid://ccmg7wurupt2x" path="res://Games/color_book/Assets/New folder/_00022.png" id="6_qtshr"]
+[ext_resource type="AudioStream" uid="uid://dthe0v78o56gl" path="res://Games/color_book/Assets/Sketching Game/Marker 2.mp3" id="7_b8s4v"]
+[ext_resource type="AudioStream" uid="uid://5ea4yirudnfn" path="res://Games/color_book/Assets/Sketching Game/Design Marker.mp3" id="9_7iu3l"]
+[ext_resource type="Texture2D" uid="uid://dxyf1m0f37ei1" path="res://Games/color_book/Assets/New folder/_00011.png" id="9_m8dvg"]
+[ext_resource type="AudioStream" uid="uid://bsidc30a1bo8h" path="res://Games/color_book/Assets/Sketching Game/Marker 3.mp3" id="11_dbw5d"]
+[ext_resource type="Texture2D" uid="uid://dmaq5m1kda0yy" path="res://Games/color_book/Assets/New folder/No.ofRoundSelected.png" id="12_flo4k"]
+[ext_resource type="Texture2D" uid="uid://vf6slk8ih43b" path="res://Games/color_book/Assets/New folder/_00033.png" id="12_omumk"]
+[ext_resource type="AudioStream" uid="uid://b651tyft6kv5g" path="res://Games/color_book/Assets/Sketching Game/Wipe.mp3" id="13_1d6jj"]
+[ext_resource type="Texture2D" uid="uid://cp7gbjs78o07y" path="res://Games/color_book/Assets/New folder/_00044.png" id="15_ad1f3"]
+[ext_resource type="Texture2D" uid="uid://beb5f6ujldlxl" path="res://Games/color_book/Assets/New folder/_0002.png" id="16_crs7k"]
+[ext_resource type="Texture2D" uid="uid://cstgngm7n6ybu" path="res://Games/color_book/Assets/New folder/_0003.png" id="16_y8oxo"]
+[ext_resource type="Texture2D" uid="uid://2mycmhfmsbsk" path="res://Games/color_book/Assets/New folder/_0004.png" id="17_gmmgq"]
+[ext_resource type="Texture2D" uid="uid://c0mg6rro5ohh4" path="res://Games/color_book/Assets/New folder/_0001.png" id="18_ethvq"]
+[ext_resource type="AudioStream" uid="uid://kcqm1j44i446" path="res://Assets/Innov - Mini Games 22.01.25/Innov - Mini Games 22.01.25/Pop Tap.mp3" id="18_koi6s"]
+[ext_resource type="Texture2D" uid="uid://bi8rjienjkobq" path="res://Games/color_book/Assets/New folder/_0005.png" id="18_ks7jh"]
+[ext_resource type="Texture2D" uid="uid://dc2yoknpd7c5a" path="res://Games/color_book/Assets/New folder/_00055.png" id="18_tgmy2"]
+[ext_resource type="Texture2D" uid="uid://b4nfwty2jm3eb" path="res://Games/color_book/Assets/New folder/deleteBtn.png" id="20_j2xee"]
+[ext_resource type="Texture2D" uid="uid://bakykwp14m65i" path="res://Games/color_book/Assets/New folder/redoBtn.png" id="21_58sjd"]
+[ext_resource type="Texture2D" uid="uid://cw3kxxpe30trs" path="res://Games/color_book/Assets/New folder/deleteBtn1.png" id="21_y2fft"]
+[ext_resource type="Texture2D" uid="uid://dtouj4vkfkvf" path="res://Games/color_book/Assets/New folder/undoBtn.png" id="22_quds1"]
+[ext_resource type="Texture2D" uid="uid://b8a0n327t0vit" path="res://Games/color_book/Assets/New folder/redoBtn1.png" id="23_d3t0c"]
+[ext_resource type="PackedScene" uid="uid://lp43qliqf0o1" path="res://Scenes/settinsbutton_2.tscn" id="25_58ds5"]
+[ext_resource type="Texture2D" uid="uid://q04lu6q6xbqs" path="res://Games/color_book/Assets/New folder/undoBtn1.png" id="25_kqpy1"]
+[ext_resource type="AudioStream" uid="uid://b1yubc3pqbel" path="res://Assets/Innov - Mini Games Music/Innov - Mini Games Music/Fun Upbeat 3.mp3" id="27_w1ool"]
+
+[sub_resource type="Theme" id="Theme_eewk8"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ewcqq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01385, 1.00367)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="tools_panal" type="TextureRect" parent="CanvasLayer2"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -278.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_yfwjn")
+expand_mode = 1
+
+[node name="Lines" type="Node2D" parent="CanvasLayer2"]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchors_preset = -1
+anchor_right = 1.002
+offset_right = -0.0500488
+offset_bottom = 69.0
+theme = SubResource("Theme_eewk8")
+
+[node name="Label" type="Label" parent="CanvasLayer2/ColorRect2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 105.0
+offset_right = -83.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_font_sizes/font_size = 40
+text = "BANNER ADS"
+horizontal_alignment = 1
+
+[node name="ColorContainer" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchor_left = 0.502
+anchor_top = 1.0
+anchor_right = 0.502
+anchor_bottom = 1.0
+offset_left = -261.55
+offset_top = -272.0
+offset_right = 261.45
+offset_bottom = -2.0
+
+[node name="red" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 0.1, 0.1, 1)
+position = Vector2(34, 121)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="RED" type="TextureButton" parent="CanvasLayer2/ColorContainer/red"]
+modulate = Color(1, 0, 0, 1)
+anchors_preset = -1
+anchor_left = -0.0901639
+anchor_top = -0.0771812
+anchor_right = 1.06516
+anchor_bottom = 0.97649
+offset_left = -122.0
+offset_top = -149.0
+offset_right = -121.9
+offset_bottom = -142.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="blue2" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.180896, 0.290713, 0.802615, 1)
+position = Vector2(89.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="blue" type="TextureButton" parent="CanvasLayer2/ColorContainer/blue2"]
+anchors_preset = -1
+anchor_left = -0.0532787
+anchor_top = -0.0805369
+anchor_right = 1.04877
+anchor_bottom = 0.993403
+offset_left = -128.0
+offset_top = -143.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="green2" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(137.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="green" type="TextureButton" parent="CanvasLayer2/ColorContainer/green2"]
+anchors_preset = -1
+anchor_left = -0.0778688
+anchor_top = -0.0805369
+anchor_right = 1.07336
+anchor_bottom = 0.993403
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="yellow2" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(190.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="yellow" type="TextureButton" parent="CanvasLayer2/ColorContainer/yellow2"]
+anchors_preset = -1
+anchor_left = -0.0491803
+anchor_top = -0.0805369
+anchor_right = 1.12295
+anchor_bottom = 0.993403
+offset_left = -122.0
+offset_top = -137.0
+offset_right = -140.0
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="purple" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.627451, 0.12549, 0.941176, 1)
+position = Vector2(247.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="purple" type="TextureButton" parent="CanvasLayer2/ColorContainer/purple"]
+anchors_preset = -1
+anchor_left = -0.127049
+anchor_top = -0.120805
+anchor_right = 1.07746
+anchor_bottom = 0.993268
+offset_left = -110.0
+offset_top = -131.0
+offset_right = -121.9
+offset_bottom = -148.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="brown" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.647059, 0.164706, 0.164706, 1)
+position = Vector2(302.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="brown" type="TextureButton" parent="CanvasLayer2/ColorContainer/brown"]
+anchors_preset = -1
+anchor_left = -0.0737705
+anchor_top = -0.0604027
+anchor_right = 1.04877
+anchor_bottom = 1.01354
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="orange" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 0.647059, 0, 1)
+position = Vector2(349.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="orange" type="TextureButton" parent="CanvasLayer2/ColorContainer/orange"]
+anchors_preset = -1
+anchor_left = -0.0737705
+anchor_top = -0.0604027
+anchor_right = 1.07746
+anchor_bottom = 1.01354
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="pink" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 0.752941, 0.796078, 1)
+position = Vector2(400.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="pink" type="TextureButton" parent="CanvasLayer2/ColorContainer/pink"]
+anchors_preset = -1
+anchor_left = -0.0491803
+anchor_top = -0.0604027
+anchor_right = 1.07787
+anchor_bottom = 1.0134
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -135.0
+offset_bottom = -148.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="deeppink" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 0.0784314, 0.576471, 1)
+position = Vector2(452.52, 121.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="deeppink" type="TextureButton" parent="CanvasLayer2/ColorContainer/deeppink"]
+anchors_preset = -1
+anchor_left = -0.102459
+anchor_top = -0.0805369
+anchor_right = 1.07746
+anchor_bottom = 1.01354
+offset_left = -116.0
+offset_top = -137.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="cyan" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(60.52, 193.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="cyan" type="TextureButton" parent="CanvasLayer2/ColorContainer/cyan"]
+anchors_preset = -1
+anchor_left = -0.0491803
+anchor_top = -0.0805369
+anchor_right = 1.12746
+anchor_bottom = 1.05367
+offset_left = -122.0
+offset_top = -149.0
+offset_right = -134.1
+offset_bottom = -154.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="violet" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.933333, 0.509804, 0.933333, 1)
+position = Vector2(115.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="violet" type="TextureButton" parent="CanvasLayer2/ColorContainer/violet"]
+anchors_preset = -1
+anchor_left = -0.0491803
+anchor_top = -0.0402685
+anchor_right = 1.04887
+anchor_bottom = 1.0134
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -121.924
+offset_bottom = -148.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="webmaroon" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.690196, 0.188235, 0.376471, 1)
+position = Vector2(163.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="webmaroon" type="TextureButton" parent="CanvasLayer2/ColorContainer/webmaroon"]
+anchors_preset = -1
+anchor_left = -0.102459
+anchor_top = -0.0402685
+anchor_right = 1.04877
+anchor_bottom = 0.993403
+offset_left = -116.0
+offset_top = -149.0
+offset_right = -121.9
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="lightyellow" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(1, 1, 0.878431, 1)
+position = Vector2(216.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="lightyellow" type="TextureButton" parent="CanvasLayer2/ColorContainer/lightyellow"]
+anchors_preset = -1
+anchor_left = -0.131148
+anchor_top = -0.0604027
+anchor_right = 1.07787
+anchor_bottom = 1.0134
+offset_left = -109.0
+offset_top = -149.0
+offset_right = -122.0
+offset_bottom = -148.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="darkgreen" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0, 0.392157, 0, 1)
+position = Vector2(273.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="darkgreen" type="TextureButton" parent="CanvasLayer2/ColorContainer/darkgreen"]
+anchors_preset = -1
+anchor_left = -0.102459
+anchor_top = -0.0805369
+anchor_right = 1.07787
+anchor_bottom = 1.01354
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -122.0
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="silver" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.752941, 0.752941, 0.752941, 1)
+position = Vector2(328.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="silver" type="TextureButton" parent="CanvasLayer2/ColorContainer/silver"]
+anchors_preset = -1
+anchor_left = -0.102459
+anchor_top = -0.100671
+anchor_right = 1.07787
+anchor_bottom = 1.03367
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -129.0
+offset_bottom = -149.034
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="gray" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(375.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="gray" type="TextureButton" parent="CanvasLayer2/ColorContainer/gray"]
+anchors_preset = -1
+anchor_left = -0.0737705
+anchor_top = -0.0805369
+anchor_right = 1.05356
+anchor_bottom = 0.973403
+offset_left = -116.0
+offset_top = -143.0
+offset_right = -122.068
+offset_bottom = -149.074
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="black" type="Sprite2D" parent="CanvasLayer2/ColorContainer"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(426.52, 192.181)
+scale = Vector2(0.16, 0.169)
+texture = ExtResource("12_flo4k")
+
+[node name="black" type="TextureButton" parent="CanvasLayer2/ColorContainer/black"]
+anchors_preset = -1
+anchor_left = -0.127049
+anchor_top = -0.0402685
+anchor_right = 1.07377
+anchor_bottom = 1.0134
+offset_left = -116.0
+offset_top = -155.0
+offset_right = -128.0
+offset_bottom = -148.994
+texture_pressed = ExtResource("12_flo4k")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="VSlider" type="VSlider" parent="CanvasLayer2/ColorContainer"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 87.0
+offset_right = 514.0
+offset_bottom = 244.0
+min_value = 5.0
+value = 5.0
+
+[node name="deletebutton" type="TextureButton" parent="CanvasLayer2/ColorContainer"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 8.0
+offset_right = 383.0
+offset_bottom = 59.0
+texture_normal = ExtResource("20_j2xee")
+texture_pressed = ExtResource("21_y2fft")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="redo" type="TextureButton" parent="CanvasLayer2/ColorContainer"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 6.0
+offset_right = 513.0
+offset_bottom = 62.0
+texture_normal = ExtResource("21_58sjd")
+texture_pressed = ExtResource("23_d3t0c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="undo" type="TextureButton" parent="CanvasLayer2/ColorContainer"]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 6.0
+offset_right = 445.0
+offset_bottom = 60.0
+texture_normal = ExtResource("22_quds1")
+texture_pressed = ExtResource("25_kqpy1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BrushContainer" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.5
+offset_top = -279.0
+offset_right = 65.5
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="circle" type="TextureButton" parent="CanvasLayer2/BrushContainer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 68.0
+offset_bottom = 67.0
+toggle_mode = true
+texture_normal = ExtResource("16_crs7k")
+texture_pressed = ExtResource("6_qtshr")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="circlemarker" type="AudioStreamPlayer2D" parent="CanvasLayer2/BrushContainer/circle"]
+position = Vector2(-16, -669)
+stream = ExtResource("5_3ntvq")
+bus = &"ingamesound"
+
+[node name="marker" type="TextureButton" parent="CanvasLayer2/BrushContainer"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 15.0
+offset_right = 133.0
+offset_bottom = 67.0
+toggle_mode = true
+texture_normal = ExtResource("18_ethvq")
+texture_pressed = ExtResource("9_m8dvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="markersound" type="AudioStreamPlayer2D" parent="CanvasLayer2/BrushContainer/marker"]
+position = Vector2(-81, -669)
+stream = ExtResource("7_b8s4v")
+bus = &"ingamesound"
+
+[node name="Texturecolor" type="TextureButton" parent="CanvasLayer2/BrushContainer"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 15.0
+offset_right = 198.0
+offset_bottom = 67.0
+toggle_mode = true
+texture_normal = ExtResource("16_y8oxo")
+texture_pressed = ExtResource("12_omumk")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="designmarker" type="AudioStreamPlayer2D" parent="CanvasLayer2/BrushContainer/Texturecolor"]
+position = Vector2(-146, -669)
+stream = ExtResource("9_7iu3l")
+bus = &"ingamesound"
+
+[node name="pen" type="TextureButton" parent="CanvasLayer2/BrushContainer"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 15.0
+offset_right = 261.0
+offset_bottom = 70.0
+toggle_mode = true
+texture_normal = ExtResource("17_gmmgq")
+texture_pressed = ExtResource("15_ad1f3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="pencil" type="AudioStreamPlayer2D" parent="CanvasLayer2/BrushContainer/pen"]
+position = Vector2(-209, -669)
+stream = ExtResource("11_dbw5d")
+bus = &"ingamesound"
+
+[node name="erazer" type="TextureButton" parent="CanvasLayer2/BrushContainer"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 15.0
+offset_right = 320.0
+offset_bottom = 68.0
+toggle_mode = true
+texture_normal = ExtResource("18_ks7jh")
+texture_pressed = ExtResource("18_tgmy2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="erazr" type="AudioStreamPlayer2D" parent="CanvasLayer2/BrushContainer/erazer"]
+position = Vector2(-268, -669)
+stream = ExtResource("13_1d6jj")
+bus = &"ingamesound"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="settinsbutton" parent="CanvasLayer" instance=ExtResource("25_58ds5")]
+
+[node name="DrawingPanel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = 57.0
+offset_right = 50.0
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ingamebutton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_koi6s")
+bus = &"ingamesound"
+
+[node name="bgm_coloring" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_w1ool")
+autoplay = true
+bus = &"bgm"
+
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/red/RED" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/blue2/blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/green2/green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/yellow2/yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/purple/purple" to="." method="_on_purple_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/brown/brown" to="." method="_on_brown_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/orange/orange" to="." method="_on_orange_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/pink/pink" to="." method="_on_pink_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/deeppink/deeppink" to="." method="_on_hotpink_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/cyan/cyan" to="." method="_on_cyan_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/violet/violet" to="." method="_on_violet_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/webmaroon/webmaroon" to="." method="_on_maroon_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/lightyellow/lightyellow" to="." method="_on_lightyellow_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/darkgreen/darkgreen" to="." method="_on_darkgreen_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/silver/silver" to="." method="_on_silver_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/gray/gray" to="." method="_on_gray_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/black/black" to="." method="_on_black_pressed"]
+[connection signal="value_changed" from="CanvasLayer2/ColorContainer/VSlider" to="." method="_on_v_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/deletebutton" to="." method="_on_deletebutton_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/redo" to="." method="_on_redo_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorContainer/undo" to="." method="_on_undo_pressed"]
+[connection signal="pressed" from="CanvasLayer2/BrushContainer/circle" to="." method="_on_circle_pressed"]
+[connection signal="pressed" from="CanvasLayer2/BrushContainer/marker" to="." method="_on_marker_pressed"]
+[connection signal="pressed" from="CanvasLayer2/BrushContainer/Texturecolor" to="." method="_on_texturecolor_pressed"]
+[connection signal="pressed" from="CanvasLayer2/BrushContainer/pen" to="." method="_on_pen_pressed"]
+[connection signal="pressed" from="CanvasLayer2/BrushContainer/erazer" to="." method="_on_erazer_pressed"]
+[connection signal="gui_input" from="DrawingPanel" to="." method="_on_drawing_panel_gui_input"]

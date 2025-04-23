@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0a6xf3r1gevp"]
+
+[sub_resource type="GDScript" id="GDScript_pw06x"]
+script/source = "extends Control
+
+var _circle_data: Dictionary
+var drawing_panel_rect
+
+
+#
+#func _draw() -> void:
+	#for position in _circle_data.keys():
+		#var data = _circle_data[position]
+		#var color = data[\"color\"]
+		#var brush_type = data[\"brush_type\"]
+		#var thickness = data[\"thickness\"]
+		#var texture = data[\"texture\"]
+		#var pencile = data[\"pencile\"]
+#
+		#var highlight_color = color
+		#highlight_color.a = 0.1
+	#
+	#
+		#if drawing_panel_rect.has_point(position) and brush_type != \"texture\" and brush_type != \"erase\":
+			#if brush_type == \"circle\":
+				#draw_circle(position, thickness, color)
+			#elif brush_type == \"square\":
+				#draw_rect(Rect2(position.x - thickness / 2, position.y - thickness / 2, thickness, 25), highlight_color)
+		#
+			#elif brush_type == \"pencile\" and texture != null:
+				#var pencile_width = 5
+				#var pencile_height = 5
+				#var rect = Rect2(position.x - pencile_width / 2, position.y - pencile_height / 2, pencile_width, pencile_height)
+				#draw_texture_rect(pencile, rect, false)
+"
+
+[node name="Layer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("GDScript_pw06x")
+
+[connection signal="draw" from="." to="." method="_on_draw"]
